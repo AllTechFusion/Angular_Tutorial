@@ -8,14 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
-  title = 'Hello';
-  number=5;
-  obj={}
-
+  title = 'All tech fusion -Plz Subscribe';
+isDisabled=false;
+count=1;
 add(){
-  this.number=this.number+1;
-  this.obj={
-    a:"hello"
-  }
+  this.count=this.count+1;
 }
+text='Template <script>alert("script")</script> syntax'
 }
