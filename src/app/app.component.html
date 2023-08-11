@@ -1,5 +1,27 @@
-<div>App Component Here</div>
+
+
+
+<div style="text-align: center;" >
 <h1 [innerText]="title"></h1>
-<button [disabled]="isDisabled" (click)="add()">I am enabled</button>
-<h1 [innerText]="count"></h1>
-<p [innerText]="text"></p>
+
+<div [ngClass]="['red','width','green']">
+    change the color
+</div>
+<div [ngClass]="{'red width':true,'green':false}">
+    change the color object
+</div>
+
+<button type="button" class="btn-primary btn" (click)="add()">Button</button>
+
+<p [ngClass]="flag ? 'green' : 'red'">divisible by 2 {{value}}</p>
+<p>added Value {{addedValue}}</p>
+
+<div [ngStyle]="{'font-size':'20px'}">
+font size
+</div>
+
+<input [(ngModel)]="size"/>
+<div [ngStyle]="{'font-size.px':size}">
+    change the width
+</div>
+</div>

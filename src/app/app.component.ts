@@ -8,11 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
-  title = 'All tech fusion -Plz Subscribe';
-isDisabled=false;
+  title = 'All tech fusion';
 count=1;
+size: number | undefined;
+value: number | undefined;
+addedValue :number | undefined;
+flag:boolean | undefined;
 add(){
-  this.count=this.count+1;
+  this.value=undefined;
+  this.count=this.count+5;
+  if(this.count % 2==0){
+    this.value=this.count;
+    this.flag= true;
+  }
+  else{
+    this.flag= false
+  }
+  this.addedValue=this.count;
 }
-text='Template <script>alert("script")</script> syntax'
+
 }
